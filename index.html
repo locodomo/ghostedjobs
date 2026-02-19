@@ -768,12 +768,12 @@ CREATE POLICY "public insert"
   });
 
   /* ── INIT ── */
-  const creds = loadCredentials();
-  if (creds) {
-    initDB(creds.url, creds.key);
-    document.getElementById('setup-overlay').style.display = 'none';
-    loadReports();
-  }
+  initDB(
+    'https://yfyctgyhnavrnxvratym.supabase.co',
+    'sb_publishable_YziiQeoVw_2LZ6mYoqADMg_LqgnQav3'
+  );
+  document.getElementById('setup-overlay').style.display = 'none';
+  loadReports();
 
   /* ── EXPOSE to HTML onclick handlers ── */
   window.saveCredentials = saveCredentials;
